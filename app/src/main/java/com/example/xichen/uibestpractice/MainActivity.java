@@ -1,5 +1,6 @@
 package com.example.xichen.uibestpractice;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
+//public class MainActivity extends AppCompatActivity {
 
     private ListView msgListView;
     private EditText inputText;
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         initMsgs();
         adapter = new MsgAdapter(MainActivity.this, R.layout.msg_item, msgList);
